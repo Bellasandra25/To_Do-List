@@ -26,10 +26,11 @@ const addTodoHandler = (e) => {
   e.preventDefault();
   const newTask = {
     id: todos.length + 1,
-    title: newTodo,
-    completed: false
+    title: newTodo.trim(),
+    completed: false,
   };
-  setTodos([...todos, newTodo]);
+  console.log("before update, todos", todos);
+  setTodos([...todos, newTask]);
     setNewTodo('');
   
 };
